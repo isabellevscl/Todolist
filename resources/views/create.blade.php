@@ -5,26 +5,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/estilo.css">
         <title>To do list</title>
-        <style>
-         #master{
-            margin: 0%;
-            padding: 0%;
-            background-color: #063970;
-        }
-        </style>    
+  
     </head>
     <body>
-        <div id="master">
-            <div> <h2> To do list </h2> </div>
-            <form action="{{ route('cadastrar_tarefa') }}" method="POST">
-                @csrf
-                <label for=""> Nome </label> <br>
-                <input type="text" name="Nome"> <br>
-                <label for="">Descrição</label> <br>
-                <input type="text" name="Descricao">
-                <button>Salvar</button>
-            </form> 
-        </div>        
+        <div class="container col-sm-12 col-md-12 col-lg-12 logo img">
+            <div class="container-fluid"> <img src="/img/Todolist_2.png"> </div>
+        </div>    
+        <div class="container1">
+            <div class="form">
+                <form aling="center" action="{{ route('cadastrar_tarefa') }}" method="POST">
+                    @csrf
+                    <label for=""> Nome da tarefa</label> <br>
+                    <input type="text" name="Nome"> <br>
+                    <label for="">Descrição</label> <br>
+                    <input type="text" name="Descricao"> <br>
+                    <button class="button">Salvar</button>
+                </form>
+            </div> 
+        </div>           
     </body>
 </html> 
